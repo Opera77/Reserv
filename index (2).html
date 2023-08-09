@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation de rendez-vous</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<header>   
+    <p><marquee behavior="" direction=""><img src="bx.png" alt="" width="20px"> <strong> JOSEPH MEDICAL</strong> <img src="bx.png" alt="" width="20px"></marquee></p>
+</header>
+<body>
+  <h1 style="color: white;" >Prenez votre rendez-vous</h1>
+  <div class="form-container">
+  <form id="reservation-form" class="form" >
+     <label for="nom">Votre nom complet :</label>
+      <input type="text" id="nom" class="name" placeholder="Nom complet" required>
+      <label for="email">Adresse email :</label>
+      <input type="email" id="email" class="email" placeholder="E-mail" name="email" required>
+      <label for="date">Date du rendez-vous :</label>
+      <input type="date" id="date" placeholder="Date" required>
+      <label for="time">Heure du rendez-vous :</label>
+      <input type="time" id="heure" placeholder="Heure" required>
+      <label for="maladies">Maladies :</label>
+      <select id="maladies" name="maladies" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="diabete">Diabète</option>
+        <option value="hypertension">Hypertension artérielle</option>
+        <option value="asthme">Asthme</option>
+        <option value="allergies">Allergies</option>
+      </select>
+      <br>
+      <br>
+      <button type="submit" id="btn" value="send Email"><strong></strong></button>
+    </form>
+  </div>
+ 
+  <div id="confirmation-message" class="hidden">
+    <p><strong> Merci, votre demmande a été recu avec succès ! notre equipe reviendra vers vous.</strong></p>
+  
+  <p>Merci! pour votre intéret à notre equipe</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+  <p style="font-family: Georgia, 'Times New Roman', Times, serif; text-decoration-color: white;"><a href="index.html"><strong>Retour à la page d'Accueil</strong></a></p>
+<br>
+<br>
+<br>
+<footer>
+  <p class="copy">&copy; 2023 by <strong>Opera Ngovula</strong> Tout droit reservés</p>
+</footer>
+
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+emailjs.init('YufnRbPNOAA6l1xrg')
+</script>
+  <script src="scriptt.js"></script>
+</body>
+</html>
+emailjs.send("service_aypr28c","template_b3u21wh",{
+  from_name: "Joseph Hopital",
+  Email_id: "jeremiengovula77gmail.com",
+  reply_to: "Nous avons recu votre demande de rendez-vous avec succes nous allons vous contacter via mail pour la confirmation",
+  });

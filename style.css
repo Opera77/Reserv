@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+ 
+h1 {
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+body {
+  background: linear-gradient(
+    rgba(3, 3, 3, 0.602), rgba(3, 3, 3, 0.52)),
+    url("doc.png");
+  /*background-color: black;*/
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+ /* height: 85vh;
+  width: 100%;*/
+}
+
+header {
+  background-color: #662bd4;
+  color: #fff;
+  padding: 10px;
+  
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #662bd4;
+  opacity: 0.1;
+  transform: translateY(-10px);
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 150px 0;
+  color: #fff;
+}
+
+.hero-content h2 {
+  animation: fadeWords 2s ease-in-out infinite;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ffffff1c;
+  color: #ede9f5;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5%;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+  0 0 20px rgba(255, 255, 255, 0.6),
+  0 0 30px rgba(255, 255, 255, 0.4),
+  0 0 40px rgba(255, 255, 255, 0.2) ; 
+}
+
+.cta-button:hover {
+  background-color: #ccc;
+}
+
+
+@keyframes fadeWords {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+
+/* Media Query pour la navigation mobile */
+@media screen and (max-width: 600px) {
+  .menu li {
+    float: none;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .bar {
+    background-color: #fff;
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0; 
+  }
+
+  .menu {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .menu.active {
+    display: block;
+  }
+}
+
+footer {
+  
+  left: 0;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  background-color:#662bd4;
+  color: #fff;
+  padding: 0.5%;
+  align-items: center;
+}
+
+.copy{
+  background-color: #662bd4;
+  text-align:center;
+}
+
+.strong
+{
+color: rgb(224, 248, 248);
+}
